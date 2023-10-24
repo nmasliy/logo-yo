@@ -1,0 +1,72 @@
+<footer class="footer">
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__top-inner">
+        <div class="footer__col">
+          <a class="footer__logo" href="./">
+            <img src="img/logo.svg" width="198" height="23" alt="Логотип Logo Yo">
+          </a>
+          <div class="footer__logo-caption">Аренда премиальных автомобилей в Москве</div>
+          <nav class="footer__nav nav">
+            {% include "../common/nav.njk" %}
+          </nav>
+        </div>
+        <div class="footer__col">
+          <div class="footer__contacts-item">
+            <div class="footer__caption">Телефон</div>
+            <div class="footer__contacts-row">
+              <a class="footer__phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+              <div class="footer__socials socials">
+                {% include "../common/socials.njk" %}
+              </div>
+            </div>
+            <div class="footer__desc">Работаем круглосуточно</div>
+          </div>
+          <div class="footer__contacts-item">
+            <div class="footer__caption">Адрес</div>
+            <div class="footer__desc">Москва, Проспект Вернадского 12д</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__middle">
+    <div class="container">
+      <div class="footer__middle-inner">
+        <div class="footer__middle-left footer__col">
+          <div class="footer__caption">Следите за нами</div>
+          <div class="footer__middle-socials socials-cards">
+            {% include "../common/socials-cards.njk" %}
+          </div>
+        </div>
+        <div class="footer__middle-right footer__col">
+          <form class="footer__form" action="#">
+            <div class="footer__form-content">
+              <h4 class="footer__title">ОСТАЛИСЬ ВОПРОСЫ&nbsp;?</h4>
+              <div class="footer__text">
+                Отправьте заявку и&nbsp;наш эксперт свяжется с&nbsp;Вами в&nbsp;ближайшее время
+              </div>
+              <div class="footer__form-row">
+                <label class="visually-hidden" for="form-name">Введите ваше имя</label>
+                <input class="footer__form-item form-control" id="form-name" name="name" type="text"
+                  placeholder="Ваше имя" required>
+                <label class="visually-hidden" for="form-phone">Введите ваш телефон</label>
+                <input class="footer__form-item form-control" id="form-phone" name="phone" type="tel"
+                  placeholder="Номер телефона" required>
+              </div>
+            </div>
+            <button class="footer__btn btn-circle btn-circle--sm">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <div class="footer__bottom-text">LOGO yO all Rights</div>
+          <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+          <div class="footer__bottom-text">Дизайн и разработка - AA</div>
+        </div>
+      </div>
+    </div>
+</footer>

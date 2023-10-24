@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a class="header__logo" href="./">
+        <img src="img/logo.svg" width="168" height="19" alt="Логотип Logo Yo">
+      </a>
+      <div class="header__menu menu">
+        <nav class="header__nav nav">
+          {% include "../common/nav.njk" %}
+        </nav>
+        <div class="header__socials socials">
+          {% include "../common/socials.njk" %}
+        </div>
+        <a class="header__btn btn" href="#">Связаться с нами</a>
+      </div>
+      <button class="burger">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="menu-overlay"></div>

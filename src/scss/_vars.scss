@@ -1,0 +1,23 @@
+// root
+:root {
+  --content-width: 1320px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + var(--container-offset));
+  --window-height: 100%;
+  --header-height: 100px;
+  --scrollTop: 0.1px;
+}
+
+// font
+$font-family: "Halvar Breitschrift", sans-serif;
+$font-family-secondary: "Eurostile Round Extended", sans-serif;
+
+// transitions
+$transition: 0.3s ease-in-out;
+$menu-transition: 0.35s ease-in-out;
+$mobile-breakpoint: 1200px;
+
+// colors
+$primary-color: #fff;
+$bg-color: #101010;
+$dark-color: #222123;

@@ -1,0 +1,28 @@
+.form-control {
+  display: block;
+  outline: none;
+  border: 2px solid transparent;
+  border-bottom: 2px solid $primary-color;
+  padding: 11px 10px;
+  width: 100%;
+  font-size: 18px;
+  color: $primary-color;
+  background: transparent;
+  transition: $transition;
+
+  &::placeholder {
+    color: $primary-color;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $primary-color;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .form-control {
+    font-size: 16px;
+  }
+}

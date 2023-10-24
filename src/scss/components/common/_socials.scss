@@ -1,0 +1,79 @@
+.socials {
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0;
+  }
+
+  li {
+    transition: transform $transition;
+
+    @include hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.socials-cards {
+  font-size: 16px;
+
+  &__item {
+    border-radius: 10px;
+    background-color: $dark-color;
+    transition: background-color $transition;
+
+    &--instagram {
+      @include hover {
+        background-color: #c0274c;
+      }
+    }
+
+    &--telegram {
+      @include hover {
+        background-color: #00d1ff;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 186px;
+    height: 137px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .socials-cards__list {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .socials-cards {
+    &__link {
+      width: 100%;
+    }
+
+    &__item {
+      flex-grow: 1;
+      width: calc(50% - 10px);
+      min-width: 150px;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.services {
+  padding: 60px 0 150px;
+
+  &__row {
+    @include grid(3, 40px);
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &:nth-child(even) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__box {
+    @include flex-center;
+
+    flex-shrink: 0;
+    border-radius: 20px;
+    padding: 18px 36px;
+    min-height: 200px;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 20%);
+    font-family: $font-family-secondary;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.4;
+    letter-spacing: 0.48px;
+    text-align: center;
+    background-color: $dark-color;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 20px;
+    padding: 20px 30px;
+    height: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: $transition;
+    aspect-ratio: 1 / 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0%) 56.79%, rgba(0, 0, 0, 100%) 88.23%);
+      opacity: 0.7;
+      transition: opacity $transition;
+      inset: 0;
+    }
+
+    @include hover {
+      background-size: 106% 106%;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__name {
+    position: relative;
+    margin-bottom: 10px;
+    font-family: $font-family-secondary;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: normal;
+    letter-spacing: 0.56px;
+  }
+
+  &__text {
+    position: relative;
+    max-width: 331px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .services {
+    padding: 40px 0 100px;
+
+    &__box {
+      min-height: 160px;
+      font-size: 20px;
+    }
+
+    &__row {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    &__item {
+      max-height: 400px;
+      background-size: cover;
+      aspect-ratio: 4 / 3;
+    }
+
+    &__col {
+      gap: 20px;
+
+      &:last-child {
+        grid-column: span 2;
+      }
+    }
+
+    &__name {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .services {
+    &__box {
+      padding: 18px 24px;
+      font-size: 18px;
+    }
+
+    &__name {
+      font-size: 20px;
+    }
+
+    &__item {
+      padding: 18px 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    &__row {
+      display: block;
+    }
+
+    &__col {
+      @include mb(40px);
+
+      gap: 40px;
+    }
+  }
+}

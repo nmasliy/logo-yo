@@ -1,0 +1,58 @@
+.cards {
+  padding: 70px 0;
+
+  &__title {
+    margin: 0 auto 26px;
+    max-width: 1020px;
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0 auto 54px;
+    max-width: 810px;
+    text-align: center;
+  }
+
+  &__slider-wrapper {
+    --swiper-navigation-size: 38px;
+    --swiper-navigation-color: $primary-color;
+
+    position: relative;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  &__slider {
+    margin: -6px;
+    padding: 6px;
+  }
+
+  &__button-prev {
+    left: 0;
+  }
+
+  &__button-next {
+    right: 0;
+  }
+
+  &__item {
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .cards {
+    padding: 40px 0;
+
+    &__slider-wrapper {
+      padding: 0 20px;
+      max-width: 640px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .cards__slider-wrapper {
+    padding: 0;
+  }
+}

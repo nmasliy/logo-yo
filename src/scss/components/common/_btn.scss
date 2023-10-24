@@ -1,0 +1,74 @@
+.btn {
+  display: inline-block;
+  border: 1px solid $primary-color;
+  border-radius: 7px;
+  padding: 16px 28px;
+  box-shadow: 0 0 29px 0 rgba(0, 0, 0, 30%);
+  font-size: 13px;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary-color;
+  background: $dark-color;
+  transition: $transition;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    color: $dark-color;
+    background-color: $primary-color;
+  }
+
+  &--lg {
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 24px 50px;
+    font-size: 18px;
+  }
+
+  @include hover {
+    color: $dark-color;
+    background-color: $primary-color;
+  }
+}
+
+.btn-circle {
+  @include flex-center;
+
+  border: 2px solid $primary-color;
+  border-radius: 50%;
+  padding: 16px;
+  width: 200px;
+  height: 200px;
+  font-size: 18px;
+  text-align: center;
+  color: $primary-color;
+  background: transparent;
+  transition: $transition;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    color: $dark-color;
+    background-color: $primary-color;
+  }
+
+  &--sm {
+    width: 169px;
+    height: 169px;
+    font-size: 15px;
+  }
+
+  @include hover {
+    color: $dark-color;
+    background-color: $primary-color;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .btn-circle {
+    width: 176px;
+    height: 176px;
+    font-size: 15px;
+  }
+}

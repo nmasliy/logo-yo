@@ -1,0 +1,38 @@
+.page-wrapper {
+  @include footerToBottom;
+
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+.title {
+  font-family: $font-family-secondary;
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1440px) {
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .title {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+}
