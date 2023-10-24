@@ -175,3 +175,11 @@
     }
   }
 }
+
+@media screen and (max-width: 475px) {
+  .hero {
+    &__cards {
+      min-height: 400px;
+    }
+  }
+}

@@ -158,7 +158,9 @@
     }
 
     &__item {
-      @include mb(40px);
+      @include mb(50px);
+
+      text-align: center;
     }
   }
 }

@@ -72,3 +72,10 @@
     font-size: 15px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .btn--lg {
+    padding: 20px 30px;
+    font-size: 16px;
+  }
+}
