@@ -136,6 +136,10 @@
 
 @media screen and (max-width: 768px) {
   .services {
+    &__item::before {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0%) 39.79%, rgb(0, 0, 0) 88.23%);
+    }
+
     &__row {
       display: block;
     }
